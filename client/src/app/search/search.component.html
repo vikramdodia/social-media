@@ -1,0 +1,30 @@
+<div><app-header></app-header></div>
+<br><div class="search-container col-md-6" style="vertical-align: center; float: right;">
+	<form>
+		<input type="text" placeholder="Search.." name="key" [(ngModel)]="key">
+		<button type="submit" class="btn" (click)="searchUser()"><!-- <i class="fa fa-search"></i> -->Search</button>
+	</form>
+</div>
+<br><div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>firstname</th>
+				<th>lastname</th>
+				<th>Want to!</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let i of users">
+				<td>{{i.firstname}}</td>
+				<td>{{i.lastname}}</td>
+				
+				<!-- <button [ngClass]="{'followup' : isFollow == true,'unfollow' : isFollow== false }"		(click)="onClick()">
+					{{isFollow == true ? 'Unfollow' : (isFollow == false ? 'Follow' : '')}}
+				</button> -->
+
+				<td *ngIf='!i.isFriend'><button class="btn" type="submit" (click)="followUser(i._id)">Follow</button></td>
+				<td *ngIf='i.isFriend'><button class="btn" type="submit" (click)="unFollowUser(i._id)">Unfollow</button></td>
+			</tbody>
+		</table>
+	</div>

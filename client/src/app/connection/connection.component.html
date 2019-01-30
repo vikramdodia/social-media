@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container">
+
+	<div class="panel panel-primary" *ngFor="let j of friends;">
+		<div class="panel-heading">
+			Friend List
+		</div>
+		<div class="panel-body">
+			{{j.firstname}} {{j.lastname}}
+		</div>
+		<div class="panel-footer">
+			<button class="btn btn-success" type="submit" (click)="unFollowUser(j._id)">Unfollow</button>
+		</div>
+	</div>
+</div>
+	<!-- <button class="btn" type="submit" (click)="followUser(i._id)">Follow</button> -->

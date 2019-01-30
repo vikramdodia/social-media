@@ -1,0 +1,45 @@
+<div class="container " style="text-align: center; background-color: gray;">
+  <div class="row">
+    <!-- <div class="span12"> -->
+      <form class="form-horizontal" action='' method="POST">
+        <fieldset>
+          <div id="legend">
+            <legend class="">Login</legend>
+          </div>
+
+          <div class="control-group">
+
+            <label class="control-label"  for="firstname">Firstname</label>
+            <div class="controls">
+              <input type="text" id="firstname" name="firstname" placeholder="Enter Firstname" class="input-xlarge" [(ngModel)]='details.firstname'>
+            </div>
+            <label class="control-label"  for="lastname">lastname</label>
+            <div class="controls">
+              <input type="text" id="lastname" name="lastname" placeholder="Enter lastname" class="input-xlarge" [(ngModel)]='details.lastname' >
+            </div>
+            <label class="control-label"  for="email">Email</label>
+            <div class="controls">
+              <input type="text" id="email" name="email" placeholder="Enter Email" class="input-xlarge" [(ngModel)]='details.email' >
+            </div>
+            <label class="control-label"  for="D.O.B">D.O.B</label>
+            <div class="controls">
+              <input type="text" id="D.O.B" name="D.O.B" placeholder="Enter D.O.B" class="input-xlarge" [(ngModel)]='details.dob' >
+            </div>
+            
+          </div>
+          <div class="control-group">
+            <!-- Password-->
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+              <input type="password" id="password" name="password" placeholder="Enter password" class="input-xlarge" [(ngModel)]='details.password'>
+            </div>
+          </div>
+          <br><button class="btn btn-info" (click)="signup(details)">signUp</button>
+          
+          <div class="control-group">
+          </div>
+        </fieldset>
+      </form>
+    <!-- </div> -->
+  </div>
+</div>

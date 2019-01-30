@@ -1,0 +1,9 @@
+<app-header></app-header>
+<form>
+	<h2>Create new post</h2>
+	<div class="form-group" style="width: 50%; ">
+		<label for="post">Post Content</label>
+		<textarea class="form-control" id="post" name="post" [(ngModel)]="details.content"></textarea>
+	</div>
+	<button type="submit" class="btn " (click)=addPost(details)>Submit</button>
+</form>
